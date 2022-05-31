@@ -31,8 +31,10 @@ Set up directories
     Create Directory    ${PDF_TEMP_OUTPUT_DIRECTORY}
 
    
-Open the Browser    
-        Open Available Browser    https://robotsparebinindustries.com/#/robot-order
+Open the Browser  
+    ${secret}=    Get Secret    URL
+         Open Available Browser    ${secret}[URL]  
+        #Open Available Browser    https://robotsparebinindustries.com/#/robot-order
         Click Button    OK
 Download the Excel file    
         Download    https://robotsparebinindustries.com/orders.csv    overwrite=True
