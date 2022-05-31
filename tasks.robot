@@ -32,11 +32,12 @@ Set up directories
 
    
 Open the Browser  
-    ${secret}=    Get Secret    URL
+    ${secret}=    Get Secret    ProjectU
     Open Available Browser    ${secret}[URL]  
     #Open Available Browser    https://robotsparebinindustries.com/#/robot-order
     Click Button    OK
 Download the Excel file    
+        ${excel_file_path}=    Collect CSV file Link from the user     
         Download    https://robotsparebinindustries.com/orders.csv    overwrite=True
 Order robots from RobotSpareBin Industries Inc
     ${orders}=    
