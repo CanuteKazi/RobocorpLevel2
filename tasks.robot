@@ -33,9 +33,9 @@ Set up directories
    
 Open the Browser  
     ${secret}=    Get Secret    URL
-         Open Available Browser    ${secret}[URL]  
-        #Open Available Browser    https://robotsparebinindustries.com/#/robot-order
-        Click Button    OK
+    Open Available Browser    ${secret}[URL]  
+    #Open Available Browser    https://robotsparebinindustries.com/#/robot-order
+    Click Button    OK
 Download the Excel file    
         Download    https://robotsparebinindustries.com/orders.csv    overwrite=True
 Order robots from RobotSpareBin Industries Inc
